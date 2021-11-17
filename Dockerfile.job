@@ -1,0 +1,5 @@
+FROM redis:6.2.6
+RUN apt update && apt install -y dnsutils
+WORKDIR /redis
+RUN mkdir /scripts
+COPY ./scripts/ /scripts/
